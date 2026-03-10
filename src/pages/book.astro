@@ -1,0 +1,58 @@
+---
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="The Agentic CMO | Francesco Federico" description="A playbook for the hybrid marketing team.">
+	<div class="stack gap-20">
+		<main class="wrapper book stack gap-12">
+			<Hero title="The Agentic CMO" tagline="A playbook for the hybrid marketing team" align="start">
+				<img src="/assets/book-cover.png" alt="The Agentic CMO book cover" width="420" height="620" />
+			</Hero>
+
+			<section class="content stack gap-4">
+				<p>
+					Most organisations still treat AI as a productivity layer. That framing is already outdated.
+				</p>
+				<p>
+					In <em>The Agentic CMO</em>, I lay out what senior marketing leaders need next: a practical operating model for hybrid intelligence, where human judgement and agentic execution are designed to work together. I break down bounded autonomy frameworks, governance patterns that protect brand and compliance, and measurement systems that track business value instead of vanity metrics.
+				</p>
+				<p>
+					I wrote this from operating experience at S&amp;P Global and JLL, where pilot programmes only mattered if they survived scale. The book is built as a pilot-to-scale playbook: where to start, what to sequence, how to redesign talent, and which decisions a CMO must keep central as autonomy increases. No hype — only what stands up under board-level scrutiny.
+				</p>
+				<a class="button" href="https://amzn.eu/d/5kVB51B" target="_blank" rel="noreferrer">Buy on Amazon</a>
+			</section>
+
+			<section class="author stack gap-3">
+				<h2>About the Author</h2>
+				<p>
+					Francesco Federico is Chief Marketing Officer at S&amp;P Global, author of <em>The Agentic CMO</em>, and publisher of <em>Chronicles of Change</em>. He advises executive teams on hybrid intelligence strategy, organisational design, and enterprise marketing transformation.
+				</p>
+			</section>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.book img {
+		border-radius: 1rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	.content {
+		max-width: 75ch;
+	}
+
+	.button {
+		display: inline-block;
+		width: fit-content;
+		padding: 0.9rem 1.4rem;
+		border-radius: 0.75rem;
+		text-decoration: none;
+		background: var(--accent-regular);
+		color: var(--accent-text-over);
+		font-weight: 700;
+	}
+</style>

@@ -4,48 +4,87 @@ import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About | Francesco Federico" description="About Francesco Federico">
+<BaseLayout title="About Francesco | Francesco Federico" description="Career background, achievements, and advisory work.">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				title="About Francesco"
+				tagline="Global CMO. Operator at the intersection of technology, data, and marketing leadership."
+				align="start"
 			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Francesco Federico at work with a colleague"
-				/>
+				<img width="480" height="620" src="/assets/portrait.jpg" alt="Francesco Federico portrait" />
 			</Hero>
 
 			<section>
 				<h2 class="section-title">Background</h2>
-				<div class="content">
+				<div class="content stack gap-4">
 					<p>
-						Global CMO at S&amp;P Global. Author of The Agentic CMO. Publisher of Chronicles of Change on
-						Substack. Two decades of marketing leadership across Fortune 500 organisations including JLL
-						and S&amp;P Global, with deep expertise in AI-driven marketing transformation.
+						I started in Milan with a JD in Law at Università Cattolica, then moved early into building companies where technology and commercial growth met directly. In those startup years I founded Shreppy, which was acquired by Telecom Italia, and launched ventures including TripShake and Digital Natives to test digital demand models in real markets, not in slideware.
+					</p>
+					<p>
+						At Vodafone, across Milan and London, I led the launch of the first My Vodafone app and scaled adoption to 90%, with rollout across nine European markets. That period shaped my operating belief: product, channel, and data only create advantage when leadership teams align around measurable behaviour change.
+					</p>
+					<p>
+						At Acer in Lugano and Taipei, I led global digital marketing, driving a 35% increase in online sales and introducing real-time pricing logic that delivered 25% revenue uplift while reducing costs by 10%. I then spent seven years at JLL in London and globally, moving from EMEA Digital Marketing Director to Executive Director of Global Marketing Technology, building teams from scratch across regions and using hybrid intelligence systems that supported billions in real estate transactions via the JLL Investor Center.
+					</p>
+					<p>
+						I joined S&amp;P Global in 2023 as Managing Director, Global Head of Marketing for Ratings, and became Chief Marketing Officer in January 2025. The through-line has stayed constant — evidence first, strong governance, and hybrid intelligence organisations where human judgement and agentic systems are orchestrated with clear accountability.
 					</p>
 				</div>
 			</section>
+
 			<section>
-				<h2 class="section-title">Published Work</h2>
+				<h2 class="section-title">Career Highlights</h2>
+				<ul class="content highlights">
+					<li>Chief Marketing Officer, S&amp;P Global (Jan 2025–present), following MD/Global Head of Marketing, Ratings (Nov 2023–Jan 2025).</li>
+					<li>Built and scaled marketing teams at JLL from the ground up — 30+ across EMEA and 50+ globally.</li>
+					<li>Delivered +50% conversion year on year at JLL, including +60% through conversational AI programmes.</li>
+					<li>Enabled billions in transaction value via the JLL Investor Center digital ecosystem.</li>
+					<li>At Acer, drove +35% online sales and deployed dynamic pricing systems (+25% revenue, -10% costs).</li>
+					<li>At Vodafone, launched the first My Vodafone app to 90% adoption across nine markets.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class="section-title">Awards &amp; Recognition</h2>
+				<ul class="content highlights">
+					<li>CMO to Watch 2025</li>
+					<li>Vodafone Online Innovation Award</li>
+					<li>Digital Experience Awards Winner</li>
+					<li>Fellow of the Chartered Institute of Marketing (FCIM)</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class="section-title">Board &amp; Advisory Roles</h2>
+				<ul class="content highlights">
+					<li>World Economic Forum Strategic Communicators Exchange (2025–present)</li>
+					<li>Diocese of Westminster Academy Trust — Non-Executive Director</li>
+					<li>St Martins of Tours Housing Association — Non-Executive Director</li>
+					<li>HFS Research Advisory Board</li>
+					<li>IDC Advisory Board</li>
+					<li>Henry Stewart Publications Editorial Board</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class="section-title">Media &amp; Speaking</h2>
 				<div class="content">
 					<p>
-						The Agentic CMO (2025) — The definitive guide to building hybrid intelligence marketing
-						organisations.
+						Francesco speaks at global events on agentic AI, marketing transformation, and leadership operating models for hybrid intelligence teams. For media and speaking enquiries: <a href="mailto:francesco@francescofederico.net">francesco@francescofederico.net</a>.
 					</p>
 				</div>
 			</section>
+
 			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>
-						Marketing Strategy · Agentic AI · Brand Architecture · Digital Transformation · Thought
-						Leadership · Team Building · Global Go-to-Market
-					</p>
-				</div>
+				<h2 class="section-title">Education</h2>
+				<ul class="content highlights">
+					<li>JD Law, Università Cattolica</li>
+					<li>INSEAD International Directors Programme (2026–2027)</li>
+					<li>Harvard CS50 for Business Professionals</li>
+					<li>IMD Digital Transformation Programme</li>
+					<li>IE Innovation for Growth</li>
+				</ul>
 			</section>
 		</main>
 
@@ -81,6 +120,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	.content {
 		grid-column: 2 / 4;
+	}
+
+	.highlights {
+		display: grid;
+		gap: 0.65rem;
+		padding-left: 1.25rem;
 	}
 
 	.content :global(a) {

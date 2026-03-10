@@ -1,0 +1,55 @@
+---
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Chronicles of Change | Francesco Federico" description="Subscribe to Chronicles of Change on Substack and LinkedIn.">
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-12">
+			<Hero title="Chronicles of Change" tagline="Evidence-first analysis for marketing leaders in the age of AI." align="start">
+				<img src="/assets/coc-logo.png" alt="Chronicles of Change logo" width="240" height="240" />
+			</Hero>
+
+			<section class="stack gap-4 content">
+				<p>
+					<em>Chronicles of Change</em> explores how AI is reshaping the CMO mandate, marketing leadership, and organisational design. Each issue focuses on practical strategic decisions: where autonomy belongs, which capabilities to centralise, and how to move from isolated pilots to repeatable operating models.
+				</p>
+				<p>
+					The editorial lens is evidence-first and operator-led. I write for senior leaders who need clear thinking, rigorous frameworks, and commercially grounded action — not hype cycles. New editions are published regularly on both Substack and LinkedIn.
+				</p>
+				<div class="actions">
+					<a href="https://chroniclesofchange.substack.com" target="_blank" rel="noreferrer">Read on Substack</a>
+					<a href="https://www.linkedin.com/newsletters/7062450977085255682/" target="_blank" rel="noreferrer">Follow on LinkedIn</a>
+				</div>
+			</section>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	img {
+		border-radius: 1rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	.content {
+		max-width: 75ch;
+	}
+
+	.actions {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.actions a {
+		display: inline-block;
+		padding: 0.75rem 1.1rem;
+		border-radius: 0.75rem;
+		text-decoration: none;
+		background: var(--gradient-subtle);
+		border: 1px solid var(--gray-700);
+	}
+</style>
