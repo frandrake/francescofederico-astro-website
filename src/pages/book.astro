@@ -4,7 +4,25 @@ import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="The Agentic CMO | Francesco Federico" description="A playbook for the hybrid marketing team.">
+<BaseLayout
+	title="The Agentic CMO — A Playbook for the Hybrid Marketing Team"
+	description="The definitive guide to building hybrid intelligence marketing organisations. By Francesco Federico, Global CMO at S&P Global."
+	image="/assets/book-cover.png"
+>
+	<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@type": "Book",
+			"name": "The Agentic CMO",
+			"author": {
+				"@type": "Person",
+				"name": "Francesco Federico"
+			},
+			"description": "A playbook for the hybrid marketing team",
+			"url": "https://amzn.eu/d/5kVB51B",
+			"image": "https://francescofederico.com/assets/book-cover.png"
+		}
+	</script>
 	<div class="stack gap-20">
 		<main class="wrapper book stack gap-12">
 			<Hero title="The Agentic CMO" tagline="A playbook for the hybrid marketing team" align="start">

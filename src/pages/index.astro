@@ -7,7 +7,31 @@ import Skills from '../components/Skills.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout>
+<BaseLayout
+	title="Francesco Federico — Global CMO, Author, Speaker"
+	description="Francesco Federico is Global CMO at S&P Global, author of The Agentic CMO, and publisher of Chronicles of Change."
+	image="/assets/portrait.jpg"
+>
+	<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Francesco Federico",
+			"url": "https://francescofederico.com",
+			"image": "https://francescofederico.com/assets/portrait.jpg",
+			"jobTitle": "Chief Marketing Officer",
+			"worksFor": {
+				"@type": "Organization",
+				"name": "S&P Global"
+			},
+			"sameAs": [
+				"https://www.linkedin.com/in/federicofrancesco/",
+				"https://chroniclesofchange.substack.com"
+			],
+			"description": "Global CMO at S&P Global, author of The Agentic CMO, publisher of Chronicles of Change.",
+			"knowsLanguage": ["en", "it"]
+		}
+	</script>
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
