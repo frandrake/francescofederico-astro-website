@@ -1,9 +1,8 @@
 ---
+import CallToAction from '../components/CallToAction.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
-import Skills from '../components/Skills.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
@@ -34,51 +33,110 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	</script>
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
-			<header class="hero">
-				<Hero
-					title="Francesco Federico"
-					tagline="Global CMO. Author of The Agentic CMO. Building hybrid intelligence at the intersection of marketing and AI."
-					align="start"
-				>
-					<div class="roles">
-						<Pill><Icon icon="book" size="1.33em" /> Author</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
-						<Pill><Icon icon="strategy" size="1.33em" /> CMO</Pill>
-					</div>
-				</Hero>
 
+			<!-- ═══ HERO ═══ -->
+			<header class="hero">
+				<div class="hero-text stack gap-4">
+					<p class="hero-eyebrow">Global Chief Marketing Officer</p>
+					<h1 class="hero-title">Francesco Federico</h1>
+					<p class="hero-tagline">
+						Leading marketing transformation at S&P Global. Author of <em>The Agentic CMO</em>. 
+						Building the operating model where human judgement and AI capability deliver measurable business value.
+					</p>
+					<div class="hero-actions">
+						<a href="/book/" class="btn btn-primary">Read the Book</a>
+						<a href="https://www.linkedin.com/in/federicofrancesco/" target="_blank" rel="noreferrer" class="btn btn-secondary">
+							LinkedIn
+							<Icon icon="arrow-right" size="1.2em" />
+						</a>
+					</div>
+				</div>
 				<img
-					alt="Portrait of Francesco Federico"
+					alt="Francesco Federico — Global CMO at S&P Global"
 					width="480"
 					height="620"
 					src="/assets/portrait.jpg"
 				/>
 			</header>
 
-			<Skills />
-
-			<section class="quick-links">
-				<a href="/about/" class="card">
-					<h3>About Francesco</h3>
-					<p>Career history, awards, advisory roles, and speaking profile.</p>
-				</a>
-				<a href="/book/" class="card">
-					<h3>The Agentic CMO</h3>
-					<p>A practical playbook for building hybrid intelligence marketing teams.</p>
-				</a>
-				<a href="/newsletter/" class="card">
-					<h3>Chronicles of Change</h3>
-					<p>Evidence-first analysis on the future of marketing leadership.</p>
-				</a>
+			<!-- ═══ CREDIBILITY BAR ═══ -->
+			<section class="credibility" aria-label="Companies led">
+				<p class="credibility-label">Marketing leadership at</p>
+				<div class="credibility-logos">
+					<img src="/assets/logos/sp-global.svg" alt="S&P Global" height="28" />
+					<img src="/assets/logos/jll.svg" alt="JLL" height="28" />
+					<img src="/assets/logos/acer.svg" alt="Acer" height="28" />
+					<img src="/assets/logos/vodafone.svg" alt="Vodafone" height="28" />
+				</div>
 			</section>
+
+			<!-- ═══ THE BOOK ═══ -->
+			<section class="book-section">
+				<div class="book-image">
+					<img src="/assets/book-cover.png" alt="The Agentic CMO book cover" width="320" height="460" />
+				</div>
+				<div class="book-content stack gap-4">
+					<h2>The Agentic CMO</h2>
+					<p class="book-subtitle">A playbook for the hybrid marketing team</p>
+					<p>
+						The definitive guide for senior marketing leaders navigating AI transformation. 
+						Built from operating experience at S&P Global and JLL — not theory, but a 
+						pilot-to-scale playbook for bounded autonomy, governance, and measurable ROI.
+					</p>
+					<div class="book-actions">
+						<a href="https://amzn.eu/d/5kVB51B" target="_blank" rel="noreferrer" class="btn btn-primary">
+							Buy on Amazon
+						</a>
+						<a href="/book/" class="btn btn-ghost">Learn More</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- ═══ NEWSLETTER ═══ -->
+			<section class="newsletter-section">
+				<div class="newsletter-content stack gap-4">
+					<h2>Chronicles of Change</h2>
+					<p class="newsletter-subtitle">Evidence-first analysis for marketing leaders in the age of AI</p>
+					<p>
+						100+ issues and growing. Each edition cuts through the noise with rigorous frameworks 
+						and commercially grounded insights on how AI is reshaping the CMO mandate, 
+						organisational design, and marketing operations. Read by senior leaders who need 
+						clarity, not hype.
+					</p>
+					<div class="newsletter-actions">
+						<a href="https://chroniclesofchange.substack.com" target="_blank" rel="noreferrer" class="btn btn-primary">
+							Subscribe on Substack
+						</a>
+						<a href="https://www.linkedin.com/newsletters/7062450977085255682/" target="_blank" rel="noreferrer" class="btn btn-ghost">
+							Follow on LinkedIn
+						</a>
+					</div>
+				</div>
+				<div class="newsletter-image">
+					<img src="/assets/coc-logo.png" alt="Chronicles of Change newsletter" width="200" height="200" />
+				</div>
+			</section>
+
+			<!-- ═══ ABOUT SUMMARY ═══ -->
+			<section class="about-summary">
+				<p>
+					Francesco Federico is Chief Marketing Officer at S&P Global, where he leads global 
+					marketing strategy and transformation. Previously CMO at JLL and senior marketing 
+					leader at Acer and Vodafone. He advises executive teams on hybrid intelligence 
+					strategy, organisational design, and enterprise marketing at scale.
+				</p>
+				<a href="/about/" class="btn btn-ghost">Full Biography <Icon icon="arrow-right" size="1.2em" /></a>
+			</section>
+
 		</div>
 
+		<!-- ═══ FOOTER CTA ═══ -->
 		<ContactCTA />
 	</div>
 </BaseLayout>
 
 <style>
+	/* ── Hero ── */
 	.hero {
 		display: flex;
 		flex-direction: column;
@@ -86,8 +144,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		gap: 2rem;
 	}
 
-	.roles {
-		display: none;
+	.hero-eyebrow {
+		font-size: var(--text-sm);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		color: var(--accent-regular);
+	}
+
+	.hero-title {
+		font-size: var(--text-3xl);
+		color: var(--gray-0);
+		line-height: 1.1;
+	}
+
+	.hero-tagline {
+		font-size: var(--text-md);
+		color: var(--gray-300);
+		max-width: 50ch;
+		line-height: 1.6;
 	}
 
 	.hero img {
@@ -98,28 +173,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		box-shadow: var(--shadow-md);
 	}
 
-	.quick-links {
-		display: grid;
+	.hero-actions {
+		display: flex;
 		gap: 1rem;
-	}
-
-	.card {
-		display: block;
-		padding: 1.25rem;
-		border: 1px solid var(--gray-800);
-		border-radius: 1rem;
-		text-decoration: none;
-		color: inherit;
-		background: var(--gradient-subtle);
-	}
-
-	.card h3 {
-		margin-bottom: 0.5rem;
-		font-size: var(--text-lg);
-	}
-
-	.card p {
-		color: var(--gray-300);
+		flex-wrap: wrap;
+		margin-top: 0.5rem;
 	}
 
 	@media (min-width: 50em) {
@@ -128,22 +186,242 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			grid-template-columns: 6fr 4fr;
 			padding-inline: 2.5rem;
 			gap: 3.75rem;
+			align-items: center;
 		}
 
-		.roles {
-			margin-top: 0.5rem;
-			display: flex;
-			gap: 0.5rem;
+		.hero-title {
+			font-size: var(--text-5xl);
+		}
+
+		.hero-tagline {
+			font-size: var(--text-lg);
 		}
 
 		.hero img {
 			aspect-ratio: 3 / 4;
 			border-radius: 4.5rem;
-			object-fit: cover;
+		}
+	}
+
+	/* ── Buttons ── */
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5em;
+		padding: 0.75rem 1.5rem;
+		border-radius: 0.75rem;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: var(--text-base);
+		transition: all var(--theme-transition);
+		white-space: nowrap;
+	}
+
+	.btn-primary {
+		background: var(--accent-regular);
+		color: var(--accent-text-over);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.btn-primary:hover {
+		background: var(--accent-dark);
+	}
+
+	.btn-secondary {
+		background: var(--gray-999_40);
+		color: var(--gray-0);
+		border: 1px solid var(--gray-800);
+	}
+
+	.btn-secondary:hover {
+		border-color: var(--gray-700);
+	}
+
+	.btn-ghost {
+		background: transparent;
+		color: var(--gray-200);
+		border: 1px solid var(--gray-800);
+	}
+
+	.btn-ghost:hover {
+		color: var(--gray-0);
+		border-color: var(--gray-700);
+	}
+
+	/* ── Credibility Bar ── */
+	.credibility {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.25rem;
+		padding: 2rem 1.5rem;
+		border-top: 1px solid var(--gray-800);
+		border-bottom: 1px solid var(--gray-800);
+	}
+
+	.credibility-label {
+		font-size: var(--text-sm);
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		color: var(--gray-400);
+		font-weight: 500;
+	}
+
+	.credibility-logos {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2.5rem;
+		flex-wrap: wrap;
+		opacity: 0.5;
+		filter: grayscale(100%);
+	}
+
+	.credibility-logos img {
+		height: 24px;
+		width: auto;
+	}
+
+	@media (min-width: 50em) {
+		.credibility {
+			flex-direction: row;
+			justify-content: center;
+			gap: 2.5rem;
+			padding: 2rem 2.5rem;
 		}
 
-		.quick-links {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
+		.credibility-logos {
+			gap: 3.5rem;
 		}
+
+		.credibility-logos img {
+			height: 28px;
+		}
+	}
+
+	/* ── Book Section ── */
+	.book-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2.5rem;
+		padding: 3rem 0;
+	}
+
+	.book-image img {
+		border-radius: 1rem;
+		box-shadow: var(--shadow-lg);
+		max-width: 280px;
+	}
+
+	.book-content h2 {
+		font-size: var(--text-2xl);
+		color: var(--gray-0);
+	}
+
+	.book-subtitle {
+		font-size: var(--text-md);
+		color: var(--accent-regular);
+		font-style: italic;
+	}
+
+	.book-content p:not(.book-subtitle) {
+		color: var(--gray-300);
+		line-height: 1.7;
+		max-width: 55ch;
+	}
+
+	.book-actions {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	@media (min-width: 50em) {
+		.book-section {
+			flex-direction: row;
+			gap: 4rem;
+			padding: 4rem 2.5rem;
+		}
+
+		.book-image img {
+			max-width: 320px;
+		}
+
+		.book-content h2 {
+			font-size: var(--text-3xl);
+		}
+	}
+
+	/* ── Newsletter Section ── */
+	.newsletter-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2.5rem;
+		padding: 3rem 1.5rem;
+		border-radius: 1.5rem;
+		background: var(--gray-999_40);
+		border: 1px solid var(--gray-800);
+	}
+
+	.newsletter-content h2 {
+		font-size: var(--text-2xl);
+		color: var(--gray-0);
+	}
+
+	.newsletter-subtitle {
+		font-size: var(--text-md);
+		color: var(--accent-regular);
+		font-style: italic;
+	}
+
+	.newsletter-content p:not(.newsletter-subtitle) {
+		color: var(--gray-300);
+		line-height: 1.7;
+		max-width: 55ch;
+	}
+
+	.newsletter-image img {
+		border-radius: 1rem;
+		width: 160px;
+		height: auto;
+	}
+
+	.newsletter-actions {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	@media (min-width: 50em) {
+		.newsletter-section {
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 3rem 3.5rem;
+		}
+
+		.newsletter-content h2 {
+			font-size: var(--text-3xl);
+		}
+
+		.newsletter-image img {
+			width: 200px;
+		}
+	}
+
+	/* ── About Summary ── */
+	.about-summary {
+		text-align: center;
+		padding: 2rem 0;
+	}
+
+	.about-summary p:first-child {
+		font-size: var(--text-md);
+		color: var(--gray-300);
+		line-height: 1.7;
+		max-width: 65ch;
+		margin-inline: auto;
+		margin-bottom: 1.5rem;
 	}
 </style>
