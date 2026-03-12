@@ -35,13 +35,16 @@ const { title, description, image } = Astro.props;
 		<style>
 			:root {
 				--_placeholder-bg: linear-gradient(transparent, transparent);
-				--bg-image-main: url('/assets/backgrounds/bg-main-light-800w.jpg');
-				--bg-image-main-curves: url('/assets/backgrounds/bg-main-light.svg');
+				/* Light mode: Pearl base with soft Steel Blue sweeps and subtle Warm Grey washes */
+				--bg-image-main: radial-gradient(ellipse 120% 80% at 60% 10%, rgba(74, 94, 124, 0.12) 0%, rgba(107, 114, 128, 0.06) 40%, transparent 70%),
+					linear-gradient(165deg, #F8F9FA 0%, rgba(74, 94, 124, 0.05) 30%, rgba(230, 57, 70, 0.03) 50%, #F8F9FA 70%);
+				--bg-image-main-curves: radial-gradient(ellipse 80% 50% at 80% 20%, rgba(74, 94, 124, 0.08) 0%, transparent 60%),
+					radial-gradient(ellipse 60% 40% at 20% 60%, rgba(107, 114, 128, 0.06) 0%, transparent 50%);
 				--bg-image-subtle-1: var(--_placeholder-bg);
 				--bg-image-subtle-2: var(--_placeholder-bg);
 				--bg-image-footer: var(--_placeholder-bg);
-				--bg-svg-blend-mode: overlay;
-				--bg-blend-mode: darken;
+				--bg-svg-blend-mode: normal;
+				--bg-blend-mode: normal;
 				--bg-image-aspect-ratio: 2.25;
 				--bg-scale: 1.68;
 				--bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
@@ -49,42 +52,40 @@ const { title, description, image } = Astro.props;
 			}
 
 			:root.theme-dark {
-				--bg-image-main: url('/assets/backgrounds/bg-main-dark-800w.jpg');
-				--bg-image-main-curves: url('/assets/backgrounds/bg-main-dark.svg');
-				--bg-svg-blend-mode: darken;
-				--bg-blend-mode: lighten;
+				/* Dark mode: Obsidian base with subtle Steel Blue glows and Vermillion hints */
+				--bg-image-main: radial-gradient(ellipse 120% 80% at 60% 10%, rgba(74, 94, 124, 0.25) 0%, rgba(74, 94, 124, 0.08) 40%, transparent 70%),
+					linear-gradient(165deg, #2B2D30 0%, rgba(74, 94, 124, 0.1) 30%, rgba(230, 57, 70, 0.06) 50%, #2B2D30 70%);
+				--bg-image-main-curves: radial-gradient(ellipse 80% 50% at 80% 20%, rgba(74, 94, 124, 0.15) 0%, transparent 60%),
+					radial-gradient(ellipse 60% 40% at 20% 60%, rgba(230, 57, 70, 0.04) 0%, transparent 50%);
+				--bg-svg-blend-mode: normal;
+				--bg-blend-mode: normal;
 			}
 
 			/* These backgrounds are displayed below the fold, so we lazy load them
 			   once the `.loaded` class has been set.  */
 			:root.loaded {
-				--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-800w.jpg');
-				--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-800w.jpg');
+				/* Light subtle: soft Warm Grey to Pearl washes */
+				--bg-image-subtle-1: radial-gradient(ellipse 100% 60% at 50% 50%, rgba(107, 114, 128, 0.08) 0%, transparent 60%);
+				--bg-image-subtle-2: radial-gradient(ellipse 80% 50% at 30% 70%, rgba(74, 94, 124, 0.06) 0%, transparent 50%);
 				--bg-image-footer: url('/assets/backgrounds/bg-footer-light-800w.jpg');
 			}
 			:root.loaded.theme-dark {
-				--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-800w.jpg');
-				--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-800w.jpg');
+				/* Dark subtle: Obsidian with Steel Blue atmospheric glow */
+				--bg-image-subtle-1: radial-gradient(ellipse 100% 60% at 50% 50%, rgba(74, 94, 124, 0.15) 0%, transparent 60%);
+				--bg-image-subtle-2: radial-gradient(ellipse 80% 50% at 70% 30%, rgba(74, 94, 124, 0.1) 0%, rgba(230, 57, 70, 0.03) 30%, transparent 55%);
 				--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-800w.jpg');
 			}
 
 			@media (min-width: 50em) {
 				:root {
 					--bg-scale: 1;
-					--bg-image-main: url('/assets/backgrounds/bg-main-light-1440w.jpg');
-				}
-				:root.theme-dark {
-					--bg-image-main: url('/assets/backgrounds/bg-main-dark-1440w.jpg');
+					/* No change needed — gradients are resolution-independent */
 				}
 
 				:root.loaded {
-					--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-1440w.jpg');
-					--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-1440w.jpg');
 					--bg-image-footer: url('/assets/backgrounds/bg-footer-light-1440w.jpg');
 				}
 				:root.loaded.theme-dark {
-					--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-1440w.jpg');
-					--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-1440w.jpg');
 					--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-1440w.jpg');
 				}
 			}
