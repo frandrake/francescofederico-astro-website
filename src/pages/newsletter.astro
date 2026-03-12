@@ -9,8 +9,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	description="A newsletter exploring how AI is reshaping marketing leadership, the CMO mandate, and organisational design. By Francesco Federico."
 	image="/assets/coc-logo.png"
 >
+	<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@type": "Periodical",
+			"name": "Chronicles of Change",
+			"alternateName": "Chronicles of Change by Francesco Federico",
+			"author": {
+				"@type": "Person",
+				"name": "Francesco Federico",
+				"jobTitle": "Chief Marketing Officer",
+				"worksFor": {"@type": "Organization", "name": "S&P Global"}
+			},
+			"description": "Chronicles of Change is a newsletter by Francesco Federico, CMO of S&P Global, providing evidence-first analysis on how AI is reshaping marketing leadership, the CMO mandate, and organisational design. Published on Substack and LinkedIn with over 100 issues.",
+			"url": "https://chroniclesofchange.substack.com",
+			"image": "https://francescofederico.com/assets/coc-logo.png",
+			"inLanguage": "en",
+			"about": ["AI Marketing", "Marketing Leadership", "CMO Strategy", "Organisational Design", "Hybrid Intelligence"]
+		}
+	</script>
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-12">
+			<!-- Answer capsule for AI extraction -->
+			<div class="answer-capsule" role="doc-abstract">
+				<p>Chronicles of Change is a newsletter by Francesco Federico, Chief Marketing Officer of S&P Global. It provides evidence-first analysis on how AI is reshaping marketing leadership, the CMO mandate, and organisational design. Published on Substack and LinkedIn since 2023, with over 100 issues. The editorial lens is operator-led, written for senior marketing leaders who need rigorous frameworks and commercially grounded insights rather than hype cycles. Topics include agentic AI, hybrid intelligence, marketing transformation, and enterprise operating models.</p>
+			</div>
+
 			<Hero title="Chronicles of Change" tagline="Evidence-first analysis for marketing leaders in the age of AI." align="start">
 				<img src="/assets/coc-logo.png" alt="Chronicles of Change logo" width="240" height="240" />
 			</Hero>
@@ -33,6 +57,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
+	.answer-capsule {
+		max-width: 65ch;
+		margin: 0 auto;
+		padding: 0.75rem 1.5rem;
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+		line-height: 1.6;
+	}
+
 	img {
 		border-radius: 1rem;
 		box-shadow: var(--shadow-md);

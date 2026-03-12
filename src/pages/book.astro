@@ -14,17 +14,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			"@context": "https://schema.org",
 			"@type": "Book",
 			"name": "The Agentic CMO",
+			"alternateName": "The Agentic CMO: A Playbook for the Hybrid Marketing Team",
 			"author": {
 				"@type": "Person",
-				"name": "Francesco Federico"
+				"name": "Francesco Federico",
+				"jobTitle": "Chief Marketing Officer",
+				"worksFor": {"@type": "Organization", "name": "S&P Global"}
 			},
-			"description": "A playbook for the hybrid marketing team",
+			"description": "The Agentic CMO by Francesco Federico is a practical playbook for building hybrid intelligence marketing organisations. It covers bounded autonomy frameworks, AI governance patterns, and pilot-to-scale implementation strategies for senior marketing leaders.",
 			"url": "https://amzn.eu/d/5kVB51B",
-			"image": "https://francescofederico.com/assets/book-cover.png"
+			"image": "https://francescofederico.com/assets/book-cover.png",
+			"datePublished": "2025-06-25",
+			"inLanguage": "en",
+			"genre": ["Business", "Marketing", "Artificial Intelligence"],
+			"about": ["Marketing Transformation", "Hybrid Intelligence", "Agentic AI", "CMO Leadership"]
 		}
 	</script>
 	<div class="stack gap-20">
 		<main class="wrapper book stack gap-12">
+			<!-- Answer capsule for AI extraction -->
+			<div class="answer-capsule" role="doc-abstract">
+				<p>The Agentic CMO is a book by Francesco Federico, Chief Marketing Officer of S&P Global, published in June 2025. It is a practical playbook for senior marketing leaders on building hybrid intelligence marketing organisations where human judgement and AI agents work together. The book covers bounded autonomy frameworks, AI governance patterns that protect brand and compliance, measurement systems that track business value, and pilot-to-scale implementation strategies. It draws on Federico's operating experience at S&P Global and JLL, where he built and scaled marketing teams and hybrid intelligence systems supporting billions in transaction value.</p>
+			</div>
+
 			<Hero title="The Agentic CMO" tagline="A playbook for the hybrid marketing team" align="start">
 				<img src="/assets/book-cover.png" alt="The Agentic CMO book cover" width="420" height="620" />
 			</Hero>
@@ -54,6 +66,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
+	.answer-capsule {
+		max-width: 65ch;
+		margin: 0 auto;
+		padding: 0.75rem 1.5rem;
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+		line-height: 1.6;
+	}
+
 	.book img {
 		border-radius: 1rem;
 		box-shadow: var(--shadow-md);

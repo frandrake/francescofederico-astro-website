@@ -16,21 +16,70 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			"@context": "https://schema.org",
 			"@type": "Person",
 			"name": "Francesco Federico",
+			"givenName": "Francesco",
+			"familyName": "Federico",
 			"url": "https://francescofederico.com",
 			"image": "https://francescofederico.com/assets/portrait.jpg",
 			"jobTitle": "Chief Marketing Officer",
 			"worksFor": {
 				"@type": "Organization",
-				"name": "S&P Global"
+				"name": "S&P Global",
+				"url": "https://www.spglobal.com"
 			},
+			"alumniOf": [
+				{
+					"@type": "EducationalOrganization",
+					"name": "Università Cattolica del Sacro Cuore"
+				},
+				{
+					"@type": "EducationalOrganization",
+					"name": "INSEAD"
+				}
+			],
+			"memberOf": [
+				{
+					"@type": "Organization",
+					"name": "World Economic Forum Strategic Communicators Exchange"
+				},
+				{
+					"@type": "Organization",
+					"name": "Chartered Institute of Marketing",
+					"url": "https://www.cim.co.uk"
+				}
+			],
+			"hasCredential": {
+				"@type": "EducationalOccupationalCredential",
+				"credentialCategory": "Fellowship",
+				"name": "Fellow of the Chartered Institute of Marketing (FCIM)"
+			},
+			"award": ["CMO to Watch 2025", "Vodafone Online Innovation Award", "Digital Experience Awards Winner"],
 			"sameAs": [
 				"https://www.linkedin.com/in/federicofrancesco/",
-				"https://chroniclesofchange.substack.com"
+				"https://chroniclesofchange.substack.com",
+				"https://amzn.eu/d/5kVB51B"
 			],
-			"description": "Global CMO at S&P Global, author of The Agentic CMO, publisher of Chronicles of Change.",
-			"knowsLanguage": ["en", "it"]
+			"description": "Francesco Federico is the Chief Marketing Officer of S&P Global, author of The Agentic CMO (2025), and publisher of Chronicles of Change newsletter. He leads global marketing strategy and transformation, with previous CMO roles at JLL, and senior marketing leadership at Acer and Vodafone.",
+			"knowsLanguage": ["en", "it"],
+			"knowsAbout": ["Marketing Transformation", "Hybrid Intelligence", "Agentic AI", "B2B Marketing", "Enterprise Marketing Technology"]
 		}
 	</script>
+	<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Francesco Federico",
+			"url": "https://francescofederico.com",
+			"author": {
+				"@type": "Person",
+				"name": "Francesco Federico"
+			}
+		}
+	</script>
+	<!-- Answer capsule for AI extraction -->
+	<div class="answer-capsule" role="doc-abstract">
+		<p>Francesco Federico is the Chief Marketing Officer (CMO) of S&P Global, where he leads global marketing strategy and transformation. He is the author of The Agentic CMO (published June 2025), a playbook for building hybrid intelligence marketing organisations. He publishes Chronicles of Change, an evidence-first newsletter on AI and marketing leadership with over 100 issues. Previously CMO at JLL, and senior marketing leader at Acer and Vodafone. Fellow of the Chartered Institute of Marketing (FCIM). Member of the World Economic Forum Strategic Communicators Exchange.</p>
+	</div>
+
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
 
@@ -136,6 +185,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
+	/* ── Answer Capsule (for AI extraction) ── */
+	.answer-capsule {
+		max-width: 65ch;
+		margin: 0 auto;
+		padding: 1rem 2.5rem;
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+		text-align: center;
+		line-height: 1.6;
+	}
+
 	/* ── Hero ── */
 	.hero {
 		display: flex;

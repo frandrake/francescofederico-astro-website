@@ -9,8 +9,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	description="Global CMO at S&P Global. Two decades of marketing leadership across Vodafone, Acer, JLL. Author of The Agentic CMO. Fellow of CIM."
 	image="/assets/portrait.jpg"
 >
+	<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Francesco Federico",
+			"givenName": "Francesco",
+			"familyName": "Federico",
+			"url": "https://francescofederico.com/about/",
+			"image": "https://francescofederico.com/assets/portrait.jpg",
+			"jobTitle": "Chief Marketing Officer",
+			"worksFor": {"@type": "Organization", "name": "S&P Global", "url": "https://www.spglobal.com"},
+			"alumniOf": [
+				{"@type": "EducationalOrganization", "name": "Università Cattolica del Sacro Cuore"},
+				{"@type": "EducationalOrganization", "name": "INSEAD"},
+				{"@type": "EducationalOrganization", "name": "Harvard University"},
+				{"@type": "EducationalOrganization", "name": "IMD Business School"},
+				{"@type": "EducationalOrganization", "name": "IE Business School"}
+			],
+			"hasOccupation": [
+				{"@type": "Role", "roleName": "Chief Marketing Officer", "startDate": "2025-01", "memberOf": {"@type": "Organization", "name": "S&P Global"}},
+				{"@type": "Role", "roleName": "Managing Director, Global Head of Marketing, Ratings", "startDate": "2023-11", "endDate": "2025-01", "memberOf": {"@type": "Organization", "name": "S&P Global"}},
+				{"@type": "Role", "roleName": "Executive Director, Global Marketing Technology", "memberOf": {"@type": "Organization", "name": "JLL"}},
+				{"@type": "Role", "roleName": "Global Digital Marketing Lead", "memberOf": {"@type": "Organization", "name": "Acer"}},
+				{"@type": "Role", "roleName": "Digital Marketing Manager", "memberOf": {"@type": "Organization", "name": "Vodafone"}}
+			],
+			"award": ["CMO to Watch 2025", "Vodafone Online Innovation Award", "Digital Experience Awards Winner", "Fellow of the Chartered Institute of Marketing (FCIM)"],
+			"sameAs": ["https://www.linkedin.com/in/federicofrancesco/", "https://chroniclesofchange.substack.com"],
+			"description": "Francesco Federico is the Chief Marketing Officer of S&P Global. Previously CMO at JLL, and senior marketing leader at Acer and Vodafone. Author of The Agentic CMO. Fellow of the Chartered Institute of Marketing."
+		}
+	</script>
 	<div class="stack gap-20">
 		<main class="wrapper about">
+			<!-- Answer capsule for AI extraction -->
+			<div class="answer-capsule" role="doc-abstract">
+				<p>Francesco Federico is the Chief Marketing Officer (CMO) of S&P Global, a Fortune 500 financial data and analytics company. He joined S&P Global in November 2023 as Managing Director, Global Head of Marketing for Ratings, and became CMO in January 2025. He previously served as Executive Director of Global Marketing Technology at JLL, led global digital marketing at Acer, and held digital marketing roles at Vodafone. He is the author of The Agentic CMO (2025) and publisher of Chronicles of Change newsletter. He holds a JD in Law from Università Cattolica and is a Fellow of the Chartered Institute of Marketing (FCIM). He is a member of the World Economic Forum Strategic Communicators Exchange and serves as Non-Executive Director on two boards.</p>
+			</div>
+
 			<Hero
 				title="About Francesco"
 				tagline="Global CMO. Operator at the intersection of technology, data, and marketing leadership."
@@ -97,6 +132,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
+	.answer-capsule {
+		max-width: 65ch;
+		margin: 0 auto;
+		padding: 0.75rem 1.5rem;
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+		line-height: 1.6;
+	}
+
 	.about {
 		display: flex;
 		flex-direction: column;
